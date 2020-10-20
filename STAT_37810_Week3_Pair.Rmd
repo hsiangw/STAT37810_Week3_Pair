@@ -5,14 +5,73 @@ date: "10/20/2020"
 output: pdf_document
 ---
 
-4. Importing the dataset into df
+4. 
 ```{r}
 df <- read.csv("info.csv")
 df
 ```
 
-5. Adding a new row
+5. 
 ```{r}
 library(tibble)
-df<-
+df<-df%>%add_row(name="Donald",age=74,city="NYC",favorite.color="red",height.cm.=190,weight.kg.=90)
+df
+```
+
+6. 
+```{r}
+data(mtcars)
+head(mtcars)
+```
+
+7. It seems the engine has 4 cylinders.
+```{r}
+rnum<-which(rownames(mtcars)=="Datsun 710") #Row number of the Datsun 710
+cnum<-which(colnames(mtcars)=="cyl") #Col number of the number of cylinders
+mtcars[rnum,cnum] #It seems the engine has 4 cylinders
+
+```
+
+
+8. Repeating (7) using column names
+```{r}
+mtcars["Datsun 710","cyl"]
+```
+
+9. It seems the dataframe has 32 rows and 11 columns.
+```{r}
+nrow(mtcars)
+ncol(mtcars)
+```
+
+
+10. 
+```{r}
+mtcars[["mpg"]]
+mtcars[[1]]
+```
+
+11.
+```{r}
+mtcars$mpg
+```
+
+12.
+```{r}
+mtcars[,c("mpg","hp")]
+```
+
+13. The mean mpg is 20.09.
+```{r}
+mean(mtcars$mpg)
+```
+
+14.
+```{r}
+plot(mtcars$hp,mtcars$mpg,main="hp vs. mpg",xlab="hp",ylab="mpg")
+```
+
+15. It seems mpg is significantly negatively associated with hp.
+```{r}
+summary(lm(mpg~hp,data=mtcars))
 ```
