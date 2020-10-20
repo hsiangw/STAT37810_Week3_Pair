@@ -5,12 +5,10 @@ date: "10/17/2020"
 output: pdf_document
 ---
 
-4. Creating the data frame df1
-```{r}
 
-```
 
-## 4
+
+4. Creating the dataframe
 ```{r}
 df <- read.csv("info.csv",row.names = 1)
 rownames(df) <- c()
