@@ -8,7 +8,7 @@ output: pdf_document
 
 
 
-4. Creating the dataframe
+4. Storing the dataframe in df
 ```{r}
 df <- read.csv("info.csv",row.names = 1)
 rownames(df) <- c()
@@ -16,15 +16,14 @@ df
 ```
 
 
-## 5
+5. Adding a new row
 ```{r}
 library(tibble)
-df <-  df %>% add_row(name = "Kendra", age = 12, city= "Chicago",favorite.color="red",height.cm.=168,weight.kg.=55)
+df <-  df %>% add_row(name = "Donald", age = 74, city= "NYC",favorite.color="orange",height.cm.=190,weight.kg.=90)
 df
 ```
 
-
-## 6
+6. Loading mtcars and taking a quick view of it
 ```{r}
 data(mtcars)
 head(mtcars)
