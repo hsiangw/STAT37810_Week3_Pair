@@ -1,6 +1,6 @@
 ---
 title: "STAT_37810_Week3_Pair"
-author: "Hsiang Wang"
+author: "Hsiang Wang, Tianheng Huang"
 date: "10/17/2020"
 output: pdf_document
 ---
@@ -86,6 +86,7 @@ fit <- lm(mpg~hp,data=mtcars)
 summary(fit)
 
 ```
+
 
 
 
