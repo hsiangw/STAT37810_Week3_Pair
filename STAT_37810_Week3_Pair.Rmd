@@ -6,6 +6,8 @@ output: pdf_document
 ---
 
 4. 
+
+
 ```{r}
 df <- read.csv("info.csv")
 df
@@ -58,6 +60,7 @@ mtcars$mpg
 
 12.
 ```{r}
+mtcars[,"mpg"]
 mtcars[,c("mpg","hp")]
 ```
 
@@ -75,3 +78,19 @@ plot(mtcars$hp,mtcars$mpg,main="hp vs. mpg",xlab="hp",ylab="mpg")
 ```{r}
 summary(lm(mpg~hp,data=mtcars))
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
