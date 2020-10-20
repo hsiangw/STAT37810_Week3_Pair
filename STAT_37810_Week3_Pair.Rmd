@@ -10,11 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## 4
-
+```{r}
+df <- read.csv("info.csv",row.names = 1)
+rownames(df) <- c()
+df
+```
 
 
 ## 5
-
+```{r}
+library(tibble)
+df <-  df %>% add_row(name = "Kendra", age = 12, city= "Chicago",favorite.color="red",height.cm.=168,weight.kg.=55)
+df
+```
 
 
 ## 6
