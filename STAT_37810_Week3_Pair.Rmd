@@ -5,8 +5,9 @@ date: "10/17/2020"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+4. Creating the data frame df
+```{r}
+
 ```
 
 ## 4
