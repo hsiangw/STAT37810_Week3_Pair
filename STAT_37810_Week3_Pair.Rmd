@@ -5,86 +5,14 @@ date: "10/20/2020"
 output: pdf_document
 ---
 
-
-## 4
+4. Importing the dataset into df
 ```{r}
-df <- read.csv("info.csv",row.names = 1)
-rownames(df) <- c()
+df <- read.csv("info.csv")
 df
 ```
 
-
-## 5
+5. Adding a new row
 ```{r}
 library(tibble)
-df <-  df %>% add_row(name = "Kendra", age = 12, city= "Chicago",favorite.color="red",height.cm.=168,weight.kg.=55)
-df
+df<-
 ```
-
-
-## 6
-```{r}
-data(mtcars)
-head(mtcars)
-
-```
-
-
-## 7\
-
-Row number of Datsun 710 is 3. \
-Column number of number of cylinder is 2.\
-The number of cylinder for Datsun 710 is 4.\
-
-## 8
-```{r}
-which(rownames(mtcars)=="Datsun 710")#Datsun 710's row number 
-which(colnames(mtcars)=="cyl") #Number of cylinders's column number
-mtcars[which(rownames(mtcars)=="Datsun 710"),which(colnames(mtcars)=="cyl")]
-```
-
-
-## 9
-```{r}
-nrow(mtcars)# number of row
-ncol(mtcars)# number of column
-```
-
-## 10
-```{r}
-mtcars[["mpg"]]
-mtcars[[1]]
-```
-
-## 11
-```{r}
-mtcars$mpg
-```
-
-## 12
-```{r}
-mtcars[,"mpg"]
-mtcars[,c("mpg","hp")]
-```
-
-## 13
-```{r}
-mean(mtcars$mpg)
-
-```
-
-## 14
-```{r}
-plot(mtcars$hp,mtcars$mpg)
-
-```
-
-## 15
-```{r}
-fit <- lm(mpg~hp,data=mtcars)
-summary(fit)
-
-```
-
-
-
